@@ -5,9 +5,12 @@ const _day = require(__dirname +
   "/date.js"); /*Binding the exports to the _day variable*/
 
 mongoose.set("strictQuery", false);
-mongoose.connect("mongodb://127.0.0.1:27017/todolistDB", {
-  useNewUrlParser: true,
-});
+mongoose.connect(
+  "mongodb+srv://eik:EE4Dprvbdn4UhFle@todolist.lbso2ua.mongodb.net/todolistDB",
+  {
+    useNewUrlParser: true,
+  }
+);
 
 const app = express();
 app.set("view engine", "ejs");
